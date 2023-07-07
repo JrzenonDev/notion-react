@@ -1,5 +1,10 @@
 {
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "esbenp.prettier-vscode": true,
+  },
+  "editor.trimAutoWhitespace": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
