@@ -1,26 +1,13 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "sourceType": "module"
-  },
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
   "extends": [
-    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:react-refresh/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
   ],
-  "plugins": [
-    "react",
-    "react-hooks",
-    "react-refresh",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "import", "prettier"],
   "rules": {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
@@ -28,6 +15,16 @@
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "prettier/prettier": "error"
-  }
+    "prettier/prettier": "error",
+    "import/no-unresolved": "error",
+    "import/named": "error",
+    "import/default": "error",
+    "import/namespace": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["node_modules/", "dist/"]
 }
